@@ -1,0 +1,2 @@
+import { Simulator } from "@/components/simulator";
+export default function Page(){return <main><div className="section-title">Promotion simulator</div><h1 style={{fontSize:38}}>Preview the exact checkout outcome.</h1><p className="muted" style={{maxWidth:700}}>Test stacking, thresholds, shipping and precedence before a campaign reaches production.</p><div style={{marginTop:20}}><Simulator/></div></main>}

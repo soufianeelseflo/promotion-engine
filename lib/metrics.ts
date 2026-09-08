@@ -1,0 +1,2 @@
+import type {Campaign} from "./types";
+export function campaignMetrics(rows:Campaign[]){const live=rows.filter(c=>c.status==="active");const revenue=rows.reduce((s,c)=>s+c.revenue,0);const redemptions=rows.reduce((s,c)=>s+c.redemptions,0);return{live:live.length,revenue,redemptions,averageOrderValue:redemptions?Math.round(revenue/redemptions):0,scheduled:rows.filter(c=>c.status==="scheduled").length}}

@@ -1,0 +1,1 @@
+export default function Loading(){return <main><div className="section-title">Loading pricing controls</div><div className="grid-auto" style={{marginTop:20}}>{[1,2,3,4].map(x=><div className="card" key={x} style={{height:110,opacity:.5}}/>)}</div></main>}

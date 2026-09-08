@@ -1,0 +1,2 @@
+import {CampaignBuilder} from "@/components/campaign-builder";
+export default function Page(){return <main><div className="section-title">Campaign builder</div><h1 style={{fontSize:38}}>Design an offer and preview margin impact.</h1><p className="muted" style={{maxWidth:700}}>The preview uses the same pricing function as the API route, keeping merchandising UI and checkout behavior aligned.</p><div style={{marginTop:20}}><CampaignBuilder/></div></main>}

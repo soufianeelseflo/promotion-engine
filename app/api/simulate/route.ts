@@ -1,0 +1,2 @@
+import { NextRequest,NextResponse } from "next/server"; import { campaigns } from "@/lib/data"; import { simulate } from "@/lib/engine";
+export async function POST(req:NextRequest){const body=await req.json().catch(()=>null);if(!body||!Array.isArray(body.cart)||!Array.isArray(body.campaignIds))return NextResponse.json({error:"cart and campaignIds arrays are required"},{status:400});return NextResponse.json({data:simulate(body.cart,campaigns.filter(c=>body.campaignIds.includes(c.id)))})}
